@@ -4,6 +4,8 @@
 
 ---
 
+🪢 [Documentation - Hébergement externaliser portfolio SLAM](https://lycee-paul-louis-courier-bts-sio.github.io/documentation_hebergement-portfolio/)
+
 ## Contexte
 
 Ce dépôt Git héberge le code source de la documentation technique du projet d'infrastructure web pour les étudiants en BTS SIO (Lycée Paul-Louis Courier). Propulsée par **MkDocs** avec le thème Material, cette documentation centralise l'architecture, les configurations serveur (VPS Infomaniak, Apache) et les procédures d'exploitation (Runbooks). Le déploiement est automatisé via une pipeline d'intégration continue (GitHub Actions).
