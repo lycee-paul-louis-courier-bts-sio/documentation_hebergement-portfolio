@@ -24,21 +24,17 @@ Les étudiants doivent concevoir et déployer un portfolio professionnel dynamiq
 ---
 ## **💡 Naviguer dans la documentation**
 
-Cette documentation est structurée selon les standards de l'industrie (de la conception à l'exploitation) pour faciliter la recherche d'informations.
+Cette documentation est structurée selon le **framework documentaire Diátaxis**. C'est un standard de l'industrie qui sépare l'information selon le besoin de l'utilisateur (comprendre la théorie vs appliquer la pratique) afin de faciliter la recherche d'informations et la maintenance.
 
 ### **📂 Arborescence de la documentation**
 
-* **🏠 Vue d'ensemble** : Contexte et architecture globale.
-* **🏗️ Infrastructure** : Configuration DNS et paramètres du VPS.
-* **🔒 Sécurité** : Durcissement serveur (Fail2ban, Crowdsec, UWF).
-* **⚙️ Serveur Web** : Déploiement d'Apache et des VirtualHosts.
-* **🚀 CI/CD** : Automatisation des mises à jour Git via Webhooks.
-* **📘 Runbooks** :
-    * Gérer les accès SSH (Création et connexion).
-    * Déployer le portfolio d'un nouvel étudiant.
-    * Procédures de sauvegarde et restauration.
+Les grands domaines du projet (Infrastructure, Sécurité, Serveur Web, CI/CD) sont organisés de manière autonome. Chaque section contient le découpage suivant :
+
+* **🧠 Architecture (`architecture.md`)** : Le "Pourquoi". Explication des choix techniques, du fonctionnement du service et des règles de sécurité.
+* **🛠️ Déploiement (`deploiement/`)** : Le "Comment installer". Procédures pas-à-pas d'installation, de configuration initiale et de mise en production.
+* **🚑 Runbooks (`runbooks/`)** : Le "Comment exploiter". Guides utilisateurs, tâches quotidiennes de maintenance et procédures de résolution d'incidents.
 
 ### **📌 Guide de navigation**
 
-- **Phase d'initialisation (Build) :** Suivez l'ordre chronologique de **Infrastructure** à **CI/CD** pour monter le serveur de zéro.
-- **Phase d'exploitation (Run) :** Référez-vous directement aux **Runbooks** pour les opérations quotidiennes ou la résolution d'incidents.
+- **Phase d'initialisation (Build) :** Parcourez les dossiers `deploiement/` de chaque domaine (de l'Infrastructure au CI/CD) pour monter le serveur de zéro.
+- **Phase d'exploitation (Run) :** Référez-vous directement aux dossiers `runbooks/` du service concerné pour vos opérations quotidiennes ou le dépannage.
