@@ -165,4 +165,4 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ## Annexe
 
-  - [Procédure : Création d'un utilisateur nominatif et configuration d'une clé SSH](../6-runbooks/creation-utilisateur-nominatif-vps.md)
+  - [Procédure : Création d'un utilisateur nominatif et configuration d'une clé SSH](../runbooks/creation-utilisateur-nominatif-vps.md)

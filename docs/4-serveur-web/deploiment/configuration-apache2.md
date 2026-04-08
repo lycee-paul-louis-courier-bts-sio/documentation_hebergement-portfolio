@@ -340,4 +340,4 @@ Afin de maintenir une présentation professionnelle et de ne pas exposer l'archi
 
 ## Annexe
 
-  - [Déploiement portfolio étudiant](../6-runbooks/deploiement-portfolio-etudiant.md)
+  - [Déploiement portfolio étudiant](../runbooks/deploiement-portfolio-etudiant.md)

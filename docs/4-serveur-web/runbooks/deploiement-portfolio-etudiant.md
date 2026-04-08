@@ -132,7 +132,7 @@ Pour router le trafic vers le bon dossier et le bon socket PHP, un hôte virtuel
 
 2. **Application du modèle.** Copier le contenu du modèle standardisé et remplacer les variables d'environnement (nom de domaine, chemins et socket FPM).
 
-    👉 [Consulter le Template de configuration VirtualHost](./template-virtualhost-apache.conf)
+    👉 [Consulter le Template de configuration VirtualHost](../deploiment/template-virtualhost-apache.conf)
 
 ---
 ## 5. Application et vérification
