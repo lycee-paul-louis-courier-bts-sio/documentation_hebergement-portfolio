@@ -1,6 +1,6 @@
 # Cahier des charges : Infrastructure d'hébergement Web
 
-![Bannière BTS SIO](../assets/banniere_bts-sio.png)
+![Bannière BTS SIO](https://raw.githubusercontent.com/lycee-paul-louis-courier-bts-sio/documentation_hebergement-portfolio/assets/banniere_bts-sio.png)
 
 ## Informations
 

@@ -1,6 +1,6 @@
 # Création des dépôts étudiants dans l'organisation GitHub
 
-![Bannière BTS SIO](../assets/banniere_bts-sio.png)
+![Bannière BTS SIO](https://raw.githubusercontent.com/lycee-paul-louis-courier-bts-sio/documentation_hebergement-portfolio/assets/banniere_bts-sio.png)
 
 ## Informations
 
