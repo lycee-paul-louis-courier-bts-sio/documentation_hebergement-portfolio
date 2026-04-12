@@ -69,5 +69,5 @@ mkdocs serve
 
 <div align="center"\>
 <br>
-<small\><i\>Dernière mise à jour : 25 mars 2026</i\></small\>
+<small\><i\>Dernière mise à jour : 26 avril 2026</i\></small\>
 </div\>
