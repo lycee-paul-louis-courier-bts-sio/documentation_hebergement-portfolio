@@ -103,7 +103,7 @@ La création d'un "Pool" FPM spécifique force l'exécution des scripts PHP sous
     `pm.*` : Gère dynamiquement l'allocation de la mémoire et des processus pour ce portfolio.
 
 ---
-## 4. Configuration du VirtualHost
+## 3. Configuration du VirtualHost
 
 Pour router le trafic vers le bon dossier et le bon socket PHP, un hôte virtuel doit être créé.
 
@@ -118,7 +118,7 @@ Pour router le trafic vers le bon dossier et le bon socket PHP, un hôte virtuel
     👉 [Consulter le Template de configuration VirtualHost](../deploiment/template-virtualhost-apache.conf)
 
 ---
-## 5. Application et vérification
+## 4. Application et vérification
 
 1. **Activation du site.**
 
