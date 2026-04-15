@@ -17,16 +17,39 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ## Sommaire
 
-1.  Ouverture des flux réseau (Pare-feu Infomaniak)
-2.  Mise à jour et installation des paquets essentiels
-3.  Configuration d'un MOTD dynamique
-4.  Sécurisation du service SSH
-5. Configuration de l'éditeur par défaut (Vim)
-6.  Politique de gestion des accès administrateurs
+1.  Déploiement avec Ansible
+2.  Ouverture des flux réseau (Pare-feu Infomaniak)
+3.  Mise à jour et installation des paquets essentiels
+4.  Configuration d'un MOTD dynamique
+5.  Sécurisation du service SSH
+6. Configuration de l'éditeur par défaut (Vim)
+7.  Politique de gestion des accès administrateurs
 
 ---
 
-## 1. Ouverture des flux réseau (Pare-feu Infomaniak)
+## 1. Déploiement avec Ansible
+
+Voici une proposition de reformulation adoptant un ton professionnel et une approche SRE pour votre procédure :
+
+---
+
+## 1. Déploiement avec Ansible
+
+L'infrastructure du Lycée Paul-Louis Courier repose sur l'outil d'automatisation **Ansible** pour piloter le déploiement des ressources. Cette méthode garantit une configuration homogène et reproductible du serveur (consulter l'[Architecture de l'infrastructure](https://lycee-paul-louis-courier-bts-sio.github.io/documentation_hebergement-portfolio/1-vue-d'ensemble/architecture-iac)).
+
+Sous réserve de disposer d'un compte utilisateur avec privilèges `sudo`, exécutez la commande suivante pour initialiser le VPS et configurer l'environnement Apache dédié aux portfolios :
+
+```bash
+ansible-playbook playbooks/site.yml -K -J
+```
+
+* **`playbooks/site.yml`** : Il s'agit du scénario principal (playbook maître) qui orchestre l'application séquentielle des rôles de sécurité, de configuration web et de déploiement étudiant.
+* **`-K`** (`--ask-become-pass`) : Cette option demande à Ansible de vous solliciter pour le mot de passe de votre compte, permettant l'élévation de privilèges indispensable à la modification de la configuration système.
+* **`-J`** (`--ask-vault-pass`) : Cette commande active la demande de mot de passe du coffre-fort **Ansible Vault**, nécessaire pour déchiffrer les variables sensibles (clés SSH, tokens API) lors de l'exécution.
+
+*Note : Si votre environnement de travail n'est pas encore configuré, veuillez suivre au préalable le [guide d'onboarding](https://lycee-paul-louis-courier-bts-sio.github.io/documentation_hebergement-portfolio/1-vue-d'ensemble/runbook/onboarding_confguration-poste-travail-ansible/).*
+
+## 2. Ouverture des flux réseau (Pare-feu Infomaniak)
 
 1. **Autoriser le trafic Web.** Le serveur a pour vocation d'héberger des portfolios accessibles publiquement. Il faut ouvrir les ports de communication web depuis le pare-feu externe d'Infomaniak.
 
@@ -38,7 +61,7 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ---
 
-## 2. Mise à jour et installation des paquets essentiels
+## 3. Mise à jour et installation des paquets essentiels
 
 1. **Actualiser le système et installer les utilitaires.** Il est fondamental de toujours travailler sur un système à jour pour combler les failles de sécurité, puis d'installer les outils de base d'administration.
 
@@ -63,7 +86,7 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ---
 
-## 3. Configuration d'un MOTD dynamique
+## 4. Configuration d'un MOTD dynamique
 
 1.  **Créer le script de Message of the Day (MOTD).** Le MOTD est le texte affiché à la connexion SSH. Un MOTD dynamique renvoie des informations système en temps réel et affiche les mentions légales d'accès.
 
@@ -102,7 +125,7 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ---
 
-## 4. Sécurisation du service SSH
+## 5. Sécurisation du service SSH
 
 1.  **Durcir le fichier de configuration SSH.** L'hébergeur Infomaniak bloque par défaut les mots de passe. Il faut s'assurer que cette règle est bien présente et bloquer la connexion directe du compte "root".
 
@@ -133,7 +156,7 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ---
 
-## 5. Configuration de l'éditeur par défaut (Vim)
+## 6. Configuration de l'éditeur par défaut (Vim)
 
 1.  **Définir Vim comme éditeur global.** Sur la distribution Debian, l'éditeur de texte par défaut (utilisé par des commandes comme `sudoedit` ou `visudo`) est souvent Nano. Afin d'uniformiser les environnements et de s'adapter aux standards d'administration système, nous le remplaçons par Vim pour l'ensemble des utilisateurs.
 
@@ -149,7 +172,7 @@ Cette procédure détaille la phase d'initialisation (Build) d'un serveur VPS so
 
 ---
 
-## 6. Politique de gestion des accès administrateurs
+## 7. Politique de gestion des accès administrateurs
 
 1.  **Désactiver le compte système par défaut.** Selon les règles de l'art, le partage de comptes (ex: utiliser tous le même utilisateur `debian`) est proscrit car cela empêche la traçabilité et l'auditabilité des actions. Chaque administrateur doit disposer de son propre compte nominatif (ex: `louismedo`). Une fois ces comptes créés, le compte générique fourni à l'installation doit être verrouillé.
 
