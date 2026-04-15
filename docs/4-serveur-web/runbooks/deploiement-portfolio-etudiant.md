@@ -103,7 +103,24 @@ La création d'un "Pool" FPM spécifique force l'exécution des scripts PHP sous
     `pm.*` : Gère dynamiquement l'allocation de la mémoire et des processus pour ce portfolio.
 
 ---
-## 3. Configuration du VirtualHost
+## 3. Déploiement du code source
+
+1. **Transfert des fichiers.** Copier les fichiers du portfolio de l'étudiant dans le répertoire `/var/www/portfolio`.
+
+2. **Sécurisation finale des fichiers.** S'assurer que les droits sont corrects après l'importation.
+
+    ```bash
+    sudo chown -R github-deploy-portfolio:portfolio-<nom-prenom> /var/www/portfolio/portfolio-<nom-prenom>
+    sudo find /var/www/portfolio/portfolio-<nom-prenom> -type d -exec chmod 750 {} \;
+    sudo find /var/www/portfolio/portfolio-<nom-prenom> -type f -exec chmod 640 {} \;
+    ```
+
+    `find -type d -exec chmod 750` : Applique les droits de lecture/exécution (accès) uniquement aux dossiers.
+
+    `find -type f -exec chmod 640` : Rend les fichiers lisibles, mais non exécutables directement par le système.
+
+---
+## 4. Configuration du VirtualHost
 
 Pour router le trafic vers le bon dossier et le bon socket PHP, un hôte virtuel doit être créé.
 
