@@ -1,4 +1,4 @@
-# Architecture - Workflow de déploiement centralisé
+# Architecture - Fonctionnement CI/CD
 
 ![Bannière BTS SIO](https://raw.githubusercontent.com/lycee-paul-louis-courier-bts-sio/documentation_hebergement-portfolio/assets/banniere_bts-sio.png)
 

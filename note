@@ -1,3 +1,0 @@
-A faire :
-
-Runbooks (Day 2) : Dans deploiement-portfolio-etudiant.md, remplace la procédure manuelle par l'exécution de ansible-playbook playbooks/deploy_students.yml.

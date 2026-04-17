@@ -1,5 +1,7 @@
 # ADR 001 : Choix de la solution IaC et Analyse de l'infrastructure
 
+![Bannière BTS SIO](https://raw.githubusercontent.com/lycee-paul-louis-courier-bts-sio/documentation_hebergement-portfolio/assets/banniere_bts-sio.png)
+
 ## Informations
 
   - **Mainteneur :** Louis MEDO
