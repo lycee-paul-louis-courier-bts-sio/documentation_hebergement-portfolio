@@ -25,7 +25,7 @@ Ce document technique présente l'architecture finale retenue pour le déploieme
 
 ## 1. Architecture et étapes du workflow
 
-![Schéma - Workflow des mises à jour des portfolios étudiant](./assets/schéma_workflow-mise-a-portfolio.png)
+![Schéma - Workflow des mises à jour des portfolios étudiant](../assets/schéma_workflow-mise-a-portfolio.png)
 *Schéma - Workflow des mises à jour des portfolios étudiant*
 
 Le processus de déploiement s'articule autour de 4 étapes clés illustrées sur le schéma :

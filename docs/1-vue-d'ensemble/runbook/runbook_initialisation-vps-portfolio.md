@@ -118,4 +118,4 @@ Cette étape applique l'ensemble des rôles : sécurisation, serveur Web, certif
 ## Annexe
 
   - [Dépôt Github - Infrastructure Ansible](https://github.com/lycee-paul-louis-courier-bts-sio/infrastructure_ansible-portfolio)
-  - [Architecture - Fonctionnement infrastructure Ansible](../architecture-iac.md)
+  - [Architecture - Fonctionnement infrastructure Ansible](../architecture/architecture-iac.md)

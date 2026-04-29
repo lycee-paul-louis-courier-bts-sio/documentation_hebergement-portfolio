@@ -88,4 +88,4 @@ La configuration `host_key_checking = True` est activée dans `ansible.cfg`. Cel
 ## Annexe
 
   - [Dépôt Github - Infrastructure Ansible](https://github.com/lycee-paul-louis-courier-bts-sio/infrastructure_ansible-portfolio)
-  - [Architecture - Fonctionnement infrastructure Ansible](../architecture-iac.md)
+  - [Architecture - Fonctionnement infrastructure Ansible](../architecture/architecture-ci-cd.md)

@@ -28,7 +28,7 @@ Cette procédure détaille le fonctionnement global et l'organisation de l'Infra
 
 **Architecture sans agent (Agentless).** Ansible fonctionne sur un modèle "Push". Le nœud de contrôle (votre poste) se connecte aux serveurs cibles via SSH pour y appliquer les configurations déclarées dans les Playbooks, sans nécessiter l'installation d'un agent sur les cibles.
 
-![Schéma - Fonctionnement architecture Ansible](./assets/schema_architecture-ansible.png)
+![Schéma - Fonctionnement architecture Ansible](../assets/schema_architecture-ansible.png)
 
 *Schéma - Fonctionnement architecture Ansible*
 
