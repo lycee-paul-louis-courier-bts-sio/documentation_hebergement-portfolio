@@ -72,7 +72,7 @@ Cette étape applique l'ensemble des rôles : sécurisation, serveur Web, certif
 1.  **Lancement du Playbook maître.**
 
     ```bash
-    ansible-playbook -i inventories/production/hosts.yml playbooks/site.yml --ask-vault-pass
+    ansible-playbook -i inventories/production/hosts.yml playbooks/site.yml --ask-vault-pass --ask-become-pass
     ```
 
     `-i inventories/production/hosts.yml` : Cible l'environnement de production.
