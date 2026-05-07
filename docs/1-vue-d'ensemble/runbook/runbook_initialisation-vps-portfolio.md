@@ -49,6 +49,35 @@ Votre poste de travail doit être prêt à orchestrer le déploiement.
 
 2.  **Mise à jour de l'inventaire.** Vérifiez que l'adresse IP dans `inventories/production/hosts.yml` correspond bien à votre nouveau VPS.
 
+3.  **Modification de du fichier d'inventaire.** Pour ajouter un nouveau serveur à votre inventaire Ansible, ouvrez le fichier `hosts.yml` situé dans le répertoire `inventories/production`. Dans la section `hosts` (sous `webservers`), ajoutez votre nouveau VPS en respectant strictement l'indentation existante (2 espaces par niveau). Assurez-vous de remplacer les valeurs entre crochets par vos informations réelles.
+
+    **Exemple :**
+
+    ```yaml
+    # ---
+    # Titre       : Hosts - Production
+    # Auteur      : Louis MEDO
+    # Date        : 14/04/2026
+    # Rôle        : Contient la liste des serveurs de production
+    # ---
+    all:
+    children:
+        webservers:
+        hosts:
+            vps_portfolio:
+            ansible_host: 83.228.241.93
+            ansible_user: admin  # Remplacer par le nom d'utilisateur réel
+            nouveau_vps:
+            ansible_host: 123.45.67.89  # Remplacer par l'IP de votre VPS
+            ansible_user: admin         # Remplacer par le nom d'utilisateur réel
+    ```
+
+    **Points de vigilance :**
+    
+    - L'indentation doit être cohérente (utilisez des espaces, pas des tabulations).
+    - Le nom du nouvel hôte (ex: `nouveau_vps`) doit être unique dans la section.
+    - Les champs `ansible_host` et `ansible_user` sont obligatoires pour chaque hôte.
+
 -----
 
 ## 3. Initialisation de la communication
