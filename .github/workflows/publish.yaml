@@ -19,4 +19,6 @@ jobs:
             
             - run: pip install 'mkdocs>=1.5' mkdocs-material # Installation de mkdocs avec le thème material
 
-            - run: mkdocs gh-deploy --config-file docs/mkdocs.yaml --cname docs-portfolio.bts-sio.eu --force # Création du site internet en se basant sur le fichier de configuration mkdocs.yaml
+            - run: echo "docs-portfolio.bts-sio.eu" > docs/CNAME
+
+            - run: mkdocs gh-deploy --config-file docs/mkdocs.yaml --force # Création du site internet en se basant sur le fichier de configuration mkdocs.yaml
