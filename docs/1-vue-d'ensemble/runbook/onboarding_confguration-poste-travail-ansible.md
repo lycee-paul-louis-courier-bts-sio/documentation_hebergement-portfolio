@@ -62,7 +62,7 @@ Les fichiers sensibles comme `secrets/vault.yml` sont chiffrés pour ne pas appa
 2.  **Utilisation lors du déploiement.** Pour que vos commandes fonctionnent, vous devez prouver que vous connaissez ce mot de passe.
 
     ```bash
-    ansible-playbook ... --ask-vault-pass
+    ansible-playbook <chemin_playbook_ansible> --ask-vault-pass
     ```
 
     `--ask-vault-pass` : Indique à Ansible de vous demander le mot de passe du coffre-fort avant de commencer.
