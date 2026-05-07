@@ -32,6 +32,7 @@ Vous devez disposer des éléments suivant avant de pouvoir continuer la procéd
 1. **Ansible configuré.** Ansible doit être opérationnelle et vous devez diposer des identifiants nécessaire. (Ref. [Onboarding - Configuration du Poste de Travail (Prérequis Ansible)](onboarding_confguration-poste-travail-ansible.md))
 2. **VPS crée.** Commandez un VPS Cloud (Debian 13). Lors de la création, **injectez votre clé SSH publique** via l'interface Infomaniak pour permettre la première connexion.
 3. **Récupération de l'IPv4.** Notez l'adresse IP publique de l'instance (ex: `83.228.241.93`).
+4. **Récupèrer le code du dépôt sur la machine.** Réaliser un `git clone https://github.com/lycee-paul-louis-courier-bts-sio/infrastructure_ansible-portfolio.git` pour avoir le code du dépôt de l'infrastructure as code.
 
 -----
 

@@ -1,4 +1,4 @@
-# Runbook : Mise à jour de la liste des étudiants
+# Ajout d'un portfolio étudiants - Ansible
 
 ![Bannière BTS SIO](https://raw.githubusercontent.com/lycee-paul-louis-courier-bts-sio/documentation_hebergement-portfolio/assets/banniere_bts-sio.png)
 
@@ -53,12 +53,12 @@ Cette procédure décrit le workflow opérationnel pour ajouter ou retirer un é
 1.  **Exécution du playbook de déploiement.** Une fois le test réussi, poussez la configuration vers le serveur de production. Nous utilisons un playbook spécifique plus léger que le déploiement complet.
 
     ```bash
-    ansible-playbook -i inventories/production/hosts.yml playbooks/deploy_students.yml --ask-vault-pass
+    ansible-playbook -i inventories/production/hosts.yml playbooks/deploy_students.yml --ask-become-pass
     ```
 
     `playbooks/deploy_students.yml` : Scénario optimisé qui exécute uniquement le rôle `student_deploy` pour accélérer l'opération.
 
-    `--ask-vault-pass` : Requis car le playbook accède aux secrets chiffrés pour configurer les accès Git.
+    `--ask-become-pass` : Paramètre demandant la saisie du mot de passe d'élévation de privilèges (sudo) requis pour exécuter les tâches d'administration sur les serveurs distants.
 
 ---
 
