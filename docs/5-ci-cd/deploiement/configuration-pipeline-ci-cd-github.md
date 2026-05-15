@@ -61,9 +61,22 @@ Ce document décrit la configuration de l'organisation GitHub pour automatiser l
           - main
     jobs:
       deploy:
+        if: github.repository != 'lycee-paul-louis-courier-bts-sio/template_portfolio' # Empêcher le lancement de la CI/CD sur le dépôt template
         runs-on: ubuntu-latest
         steps:
+          - name: Vérification des secrets
+            id: check_secrets
+            env:
+              HOST_SECRET: ${{ secrets.VPS_HOST }}
+            run: |
+              if [ -z "$HOST_SECRET" ]; then
+                echo "⚠️ Secrets non configurés. Déploiement ignoré."
+                echo "skip=true" >> $GITHUB_OUTPUT
+              else
+                echo "skip=false" >> $GITHUB_OUTPUT
+              fi
           - name: Connexion SSH et déclenchement du Wrapper
+            if: steps.check_secrets.outputs.skip != 'true'
             uses: appleboy/ssh-action@v1.0.3
             with:
               host: ${{ secrets.VPS_HOST }}
